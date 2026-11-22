@@ -1,0 +1,1088 @@
+/*
+ * Elevate Help: all guide content.
+ *
+ * Each role has groups of articles. Each article is a list of blocks:
+ *   ['p', text]                      paragraph
+ *   ['h', text]                      sub-heading (also listed in "On this page")
+ *   ['steps', [text, ...]]           numbered steps
+ *   ['ul', [text, ...]]              bullet list
+ *   ['note', kind, title, text]      kind: tip | info | warn
+ *   ['shot', file, caption]          screenshot from assets/screens
+ *   ['table', [head...], [[row...]]]
+ *
+ * Inline marks: **bold**, `Button or label` (rendered as a UI chip).
+ * Facts here were taken from the Elevate client and server code. When the
+ * app changes, change the matching article.
+ */
+window.ELEVATE_DOCS = {
+  support: {
+    email: 'support@era92elevate.org',
+    phones: [
+      { tel: '+256745887386', display: '+256 745 887 386' },
+      { tel: '+256705783917', display: '+256 705 783 917' },
+    ],
+  },
+
+  roles: [
+    /* ───────────────────────────── START HERE ───────────────────────────── */
+    {
+      id: 'start',
+      name: 'Start here',
+      short: 'Everyone',
+      blurb: 'Signing in, staying signed in, and the parts of Elevate every role shares.',
+      groups: [
+        {
+          name: 'Getting in',
+          articles: [
+            {
+              id: 'what-is-elevate',
+              title: 'What Elevate is',
+              summary: 'One portal for learning, teaching and running a hub.',
+              blocks: [
+                ['p', 'Elevate is the learning portal for era92 Elevate. Students apply for courses, learn online and in class, hand in work and build a portfolio. Instructors build course content and mark work. Hub managers run a physical learning hub: they approve students, plan the timetable and take attendance.'],
+                ['p', 'Everybody signs in at the same address. What you see after signing in depends on your role, so the menu on the left is different for a student, an instructor and a hub manager.'],
+                ['table', ['Role', 'What you do on Elevate'], [
+                  ['Student', 'Apply for a course, pay fees, follow lessons, hand in assignments, check in to class, build your Blueprint portfolio.'],
+                  ['Instructor', 'Build modules and lessons, set assessments, mark submissions, follow student progress.'],
+                  ['Hub manager', 'Approve enrolments, manage students and courses, plan the timetable, run attendance, follow payments and reports for your hub.'],
+                ]],
+                ['note', 'info', 'Your role is set for you', 'You cannot change your own role. If your menu looks wrong for the work you do, contact the era92 team.'],
+              ],
+            },
+            {
+              id: 'sign-in',
+              title: 'Sign in',
+              summary: 'Email and password, or Google.',
+              screen: 'public-login',
+              blocks: [
+                ['shot', 'public-login', 'The sign-in screen.'],
+                ['steps', [
+                  'Open Elevate. If you are signed out you land on **Welcome back**.',
+                  'Type your `Email address` and `Password`.',
+                  'Click `Sign In`.',
+                ]],
+                ['p', 'You can also click `Continue with Google`. If your Google email is new to Elevate, a student account is made for you from your Google name and email, and you go straight in.'],
+                ['h', 'If sign-in fails'],
+                ['ul', [
+                  '**"Authentication failed, invalid username/password"**: check the email and password. Passwords are case sensitive.',
+                  '**You are sent to Verify email**: your email is not confirmed yet. Enter the 6-digit code we emailed you.',
+                  '**"Google sign-in is coming soon"**: Google sign-in is not switched on yet. Use your email and password.',
+                ]],
+                ['note', 'info', 'About “Remember me”', 'The `Remember me` box does not change anything yet. Elevate keeps you signed in the same way whether it is ticked or not.'],
+              ],
+            },
+            {
+              id: 'forgot-password',
+              title: 'Forgot your password',
+              summary: 'Reset it with a 6-digit email code.',
+              blocks: [
+                ['steps', [
+                  'On the sign-in screen click `Forgot password?`.',
+                  'Enter your `Email address` and click `Send code`.',
+                  'Check your email for a 6-digit code. Type it into `6-digit code` and click `Continue`.',
+                  'Type a `New password` (at least 8 characters) and the same again in `Confirm new password`.',
+                  'Click `Save new password`. You will see **"Password changed. Please sign in."**',
+                ]],
+                ['ul', [
+                  'The code expires after **15 minutes**.',
+                  'You can ask for a new code once every **60 seconds**.',
+                  'After **6 wrong tries** you need a new code.',
+                  'Changing your password signs you out everywhere else.',
+                ]],
+                ['note', 'tip', 'No email?', 'Look in your spam folder. Elevate moves to the code screen even when an email is not registered, so it never reveals who has an account. If nothing arrives, make sure you typed the email you signed up with.'],
+              ],
+            },
+            {
+              id: 'sessions',
+              title: 'Staying signed in',
+              summary: 'Why Elevate sometimes signs you out.',
+              blocks: [
+                ['p', 'Elevate signs you out on purpose in three situations. None of them lose your saved work.'],
+                ['table', ['What happened', 'Why'], [
+                  ['"Logged out due to inactivity"', 'No mouse, keyboard, scroll or touch for **60 minutes**. A video or audio that is playing counts as activity, so you can watch a lesson without being signed out.'],
+                  ['Signed out after signing in somewhere else', 'Each account can be signed in in **one place at a time**. Signing in on a new phone or browser signs out the old one.'],
+                  ['Signed out after a long day', 'A session lasts at most **12 hours**. Sign in again to continue.'],
+                ]],
+                ['note', 'tip', 'Sharing a computer at the hub?', 'Always use `Sign out` from the profile menu (top right) before you walk away.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Around the app',
+          articles: [
+            {
+              id: 'header',
+              title: 'Top bar, notifications and dark mode',
+              summary: 'The bell, your profile menu and the bug button.',
+              blocks: [
+                ['h', 'Notification bell'],
+                ['p', 'The bell shows how many unread notifications you have (up to “9+”). Click it to open **Notifications**. Click an item to open it and mark it read, or click `Mark all read`. The list refreshes every minute.'],
+                ['h', 'Profile menu'],
+                ['p', 'Click your name at the top right to open:'],
+                ['ul', [
+                  '`My Profile`: your personal details.',
+                  '`Dark Mode`: switch between the dark and light look on this device.',
+                  '`Sign out`.',
+                ]],
+                ['h', 'Report a bug'],
+                ['p', 'The round button at the bottom right opens **Report a Bug**. Fill in `Describe the bug` (required) and, if you can, `Steps to reproduce`. Clicking `Send Report` opens your email app with the report filled in. Press send there to deliver it.'],
+              ],
+            },
+            {
+              id: 'settings',
+              title: 'Settings and password',
+              summary: 'Account details, change password, appearance.',
+              blocks: [
+                ['p', 'Open `Settings` at the bottom of the left menu. It has four sections.'],
+                ['table', ['Section', 'What it does'], [
+                  ['My Profile', 'Shows your name, email, username, role and account status. If your email is not confirmed, use the `Verify` button here.'],
+                  ['Security', 'Change your password.'],
+                  ['Notifications', 'Email, class reminder, result and announcement switches.'],
+                  ['Appearance', 'Turn `Dark Mode` on or off.'],
+                ]],
+                ['h', 'Change your password'],
+                ['steps', [
+                  'Go to `Settings` → `Security`.',
+                  'Enter your `Current Password`.',
+                  'Enter a `New Password` of at least 8 characters, then `Confirm New Password`.',
+                  'Click `Save`. You will see **"Password updated successfully"**.',
+                ]],
+                ['note', 'warn', 'Notification switches are not saved yet', 'The switches under Notifications go back to their default when you leave the page. Your choice there does not change which notifications you get.'],
+              ],
+            },
+            {
+              id: 'get-help',
+              title: 'Contact the era92 team',
+              summary: 'Email and phone numbers for support.',
+              blocks: [
+                ['p', 'If a guide here does not answer your question, the era92 Elevate team is happy to help.'],
+                ['contact'],
+                ['p', 'Students who are not on a course yet also find these contacts behind the `Need a hand?` button on Home.'],
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    /* ───────────────────────────── STUDENT ───────────────────────────── */
+    {
+      id: 'student',
+      name: 'Student',
+      short: 'Students',
+      blurb: 'Apply for a course, pay, learn, hand in work and build your portfolio.',
+      groups: [
+        {
+          name: 'Joining',
+          articles: [
+            {
+              id: 'create-account',
+              title: 'Create your account',
+              summary: 'Sign up with your email and a 6-digit code.',
+              screen: 'public-register',
+              blocks: [
+                ['shot', 'public-register', 'The sign-up screen.'],
+                ['steps', [
+                  'On the sign-in screen click `Sign up`.',
+                  'Fill in `First name`, `Last name`, `Email address`, `Password` (at least 8 characters) and `Confirm password`.',
+                  'Click `Create Account`. We email you a 6-digit code. Nothing is created yet.',
+                  'Type the code and click `Confirm & Create Account`.',
+                  'When you see **"Thank you for joining era92 elevate!"** you can sign in.',
+                ]],
+                ['p', 'Did not get the code? Click `Didn’t get it? Send another code`. Typed the wrong email? Click `Change email`.'],
+                ['note', 'tip', 'Faster: use Google', 'Click `Continue with Google` and your account is made from your Google name and email. No password or code needed.'],
+                ['note', 'info', 'Where are hub and course?', 'Sign-up only asks for your name and email. You choose your learning hub and give your phone number when you apply for your first course.'],
+              ],
+            },
+            {
+              id: 'first-login',
+              title: 'Your first sign-in',
+              summary: 'What you see before you are on a course.',
+              blocks: [
+                ['p', 'Until a hub approves you for a course, Elevate keeps things simple. Your menu shows only `Home` and `Browse Courses` (and `Payments` if you owe a fee).'],
+                ['p', 'Home welcomes you and has an `Explore Courses` button. The full menu (My Courses, Live Classes, Assessments and the rest) appears once your place on a course is approved and paid for.'],
+                ['h', 'Screens that may appear first'],
+                ['table', ['Screen', 'What to do'], [
+                  ['Confirm your email', 'Enter the 6-digit code we sent and click `Verify my email`. The code expires in 15 minutes; use `Send another code` if needed.'],
+                  ['Quick update before you continue', 'Students who have been on a course get this every 3 months. Tell us your gender, phone, the year you finished and what you are doing now (employed, self-employed, freelancing, internship or not working), then click `Submit and continue`. It cannot be skipped.'],
+                  ['Thanks for registering!', 'Some older accounts wait for the hub to approve them. The screen checks again every 30 seconds, or click `Check again`.'],
+                ]],
+                ['note', 'info', 'Why the quick update matters', 'These answers are how era92 shows what the programme achieves for students. They stay private to the team.'],
+              ],
+            },
+            {
+              id: 'enrol',
+              title: 'Browse and apply for a course',
+              summary: 'Find a course, agree to the fees, send your request.',
+              screen: 'student-catalog',
+              blocks: [
+                ['shot', 'student-catalog', 'Browse Courses shows the courses open for enrolment.'],
+                ['steps', [
+                  'Click `Browse Courses` in the menu. Use the search box to find a course by name, description or instructor.',
+                  'On the course card, click `Enroll now`.',
+                  'For a paid course you see **Before you enroll** with the course fee and the registration fee. Click `I agree & continue` (nothing is charged yet).',
+                  'Fill in **A few details first**: whether you have a computer, your `Learning Hub`, `Gender`, `Date of Birth` (optional) and `Phone number`.',
+                  'Click `Enroll`. Your request goes to the hub for approval and you get a confirmation email.',
+                ]],
+                ['h', 'What the card tells you'],
+                ['table', ['Card shows', 'Meaning'], [
+                  ['Enroll now', 'You can apply.'],
+                  ['Pending approval', 'Your request is with the hub.'],
+                  ['Pay registration to continue', 'Pay the registration fee and your application is sent automatically.'],
+                  ['Approved, make payment', 'You are approved. Pay the first month to open the course.'],
+                  ['Enrolled', 'You have a place. Click to go to My Courses.'],
+                  ['One course at a time', 'You already have, or are asking for, another course.'],
+                  ['Enrollment closed', 'This course is not taking applications right now.'],
+                ]],
+                ['h', 'Rules to know'],
+                ['ul', [
+                  '**One course at a time.** If you already have a request or a place, you cannot apply for another. Talk to your hub if you need to change.',
+                  '**Registration fee first.** When a registration fee is set, you pay it before your application is sent, even for a free course. It is paid once per year and covers every course you take that year.',
+                  '**Every request is approved by a hub.** You get an email when it is approved or turned down. If it is turned down you can apply for another course.',
+                ]],
+              ],
+            },
+            {
+              id: 'payments',
+              title: 'Pay your fees',
+              summary: 'Mobile money or card through Flutterwave.',
+              screen: 'student-payments',
+              blocks: [
+                ['shot', 'student-payments', 'The Payments page lists what you owe and what you have paid.'],
+                ['p', '**Fee breakdown** shows a card for everything you can pay for: the registration fee and your course. Fees appear here once a hub manager approves your place on a course that charges.'],
+                ['steps', [
+                  'Open `Payments` and click the card you want to pay for.',
+                  'Click `Pay UGX …`.',
+                  'Choose **MTN Mobile Money**, **Airtel Money** or **Card**. For mobile money, enter the `Mobile number` that will pay.',
+                  'Click `Review payment`, check the **Payment summary**, then click `Confirm payment`.',
+                  'Approve the prompt on your phone (or complete the card form). Then click `I have finished paying`.',
+                  'Wait on the result page. It can take up to a minute. When you see **Payment successful**, click `Download receipt` if you want a copy.',
+                ]],
+                ['note', 'warn', 'Never pay twice', 'If you see **"We are checking this payment"** or **"Still waiting for Flutterwave"**, do not pay again. Use `Check status` in your payment history later. Elevate never asks for your mobile money PIN.'],
+                ['h', 'How monthly fees work'],
+                ['ul', [
+                  'A paid course is charged **every month**. The first month is due when you are approved, and later months fall due on the same day each month.',
+                  'You get a reminder 7 days before a month is due, in the app and by email.',
+                  'If a month is not paid on the due date, **the course is paused** until you pay. Paying opens it again straight away.',
+                  'Free courses never charge a monthly fee.',
+                ]],
+                ['h', 'Payment statuses'],
+                ['table', ['Status', 'Meaning'], [
+                  ['Paid', 'Money received. Your receipt is ready.'],
+                  ['Pending', 'Waiting for Flutterwave to confirm.'],
+                  ['Under review', 'The amount did not match. The team will check it.'],
+                  ['Failed', 'Nothing was collected. You can try again.'],
+                  ['Reversed', 'The payment was refunded.'],
+                  ['Cancelled', 'The payment was stopped before it finished.'],
+                ]],
+                ['p', 'Click `View all` under **Payment history** to see every payment with its receipt, or `Statement` for a printable list.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Learning',
+          articles: [
+            {
+              id: 'home',
+              title: 'Your Home dashboard',
+              summary: 'Announcements, courses, today’s class and your marks.',
+              screen: 'student-home',
+              blocks: [
+                ['shot', 'student-home', 'Home once you are on a course.'],
+                ['ul', [
+                  '**Announcements** rotate across the top every few seconds. Hover or click the pause button to stop them.',
+                  '**My Courses** lists your courses. Online courses have `View Details →`.',
+                  '**Attendance Check-in Trend** shows what time you checked in each day this week.',
+                  '**Calendar** marks the days that have sessions.',
+                  '**Today’s Class** shows your next class. `View All →` opens your timetable.',
+                  '**My Performance** shows your average mark, points, your position in the class and how much has been marked.',
+                ]],
+              ],
+            },
+            {
+              id: 'course-player',
+              title: 'Study an online course',
+              summary: 'Check in, follow modules, complete lessons and quizzes.',
+              screen: 'student-course-player',
+              blocks: [
+                ['shot', 'student-my-courses', 'My Courses: online courses have a Start or Continue button.'],
+                ['steps', [
+                  'Open `My Courses` and click `Start course` or `Continue learning`.',
+                  'Self-paced courses ask you to check in once a day. Click `Check In`, then **type** the code you are shown (copy and paste are turned off) and click `Continue`.',
+                  'Open a module, then a lesson. Read it or watch the video.',
+                  'Click `Mark as Complete` when you are done. Some lessons have a quiz instead: answer it and click `Submit Quiz`.',
+                ]],
+                ['shot', 'student-course-player', 'The course player with modules, progress and resources.'],
+                ['h', 'When the next module opens'],
+                ['p', 'Modules open one week at a time from the course start date. You also need to complete every item in the previous module and hand in its assignment. You never wait for the instructor to mark it.'],
+                ['table', ['Message on a locked module', 'What it means'], [
+                  ['Unlocks <date>', 'Its week has not started yet.'],
+                  ['Finish everything in the previous module…', 'Some lessons in the module before are not complete.'],
+                  ['Hand in the previous module’s assignment…', 'The assignment before is not submitted.'],
+                  ['Opens once your hub sets the course start date', 'Only Module 1 is open until the hub sets a start date.'],
+                ]],
+                ['h', 'Quizzes'],
+                ['p', 'The usual pass mark is 70%. If you pass you see **"Passed! Next module unlocked."** If not, click `Try Again`. The correct answers are shown after you submit.'],
+                ['h', 'Hand in a project in the player'],
+                ['steps', [
+                  'On an assignment item click `Submit Assignment`.',
+                  'Paste the link to your work in `Project link` (for example a Google Drive, GitHub or Behance link).',
+                  'Click `Submit Project`.',
+                ]],
+                ['ul', [
+                  'You get **10 points** as soon as you hand it in, and up to 90 more when it is marked. A mark of 80% gives 10 + 72 = 82 points.',
+                  'You can resubmit until your instructor approves it.',
+                  'You must finish the module’s other items before the assignment can be handed in.',
+                ]],
+                ['p', 'Click `My Results →` to see every assignment, its status, your score and feedback.'],
+                ['note', 'info', 'In-person courses', 'Courses taught in class do not have the online player. Their materials and assignments are under `Assessments`.'],
+              ],
+            },
+            {
+              id: 'assessments',
+              title: 'Assessments and resources',
+              summary: 'Download materials and hand in assignments before the deadline.',
+              screen: 'student-assessments',
+              blocks: [
+                ['shot', 'student-assessments', 'Assessments has a Resources tab and an Assignments tab.'],
+                ['p', 'Open `Assessments` in the menu. The **Resources** tab has the materials your instructor shared. Click `Open` on any of them. The **Assignments** tab lists your work by week, with `Pending`, `Submitted` and `Graded` tabs.'],
+                ['h', 'Hand in an assignment'],
+                ['steps', [
+                  'Open the **Assignments** tab and find the assignment.',
+                  'Click `Submit Work`.',
+                  'Paste a link to your work in `Submission link`.',
+                  'Click submit. You will see **"Assignment submitted successfully!"**',
+                ]],
+                ['p', 'Before the deadline you can change it with `Edit Submission`.'],
+                ['note', 'warn', 'Deadlines are firm', 'After the due date the card shows **Deadline passed** and Elevate will not accept the work. Once an assignment has a mark it cannot be changed.'],
+                ['note', 'tip', 'Make your link open for everyone', 'Before you submit a Google Drive or Docs link, set sharing to “Anyone with the link”. Otherwise your instructor cannot open it.'],
+              ],
+            },
+            {
+              id: 'classes',
+              title: 'Live classes and your timetable',
+              summary: 'Join a class and see your week.',
+              screen: 'student-live-classes',
+              blocks: [
+                ['shot', 'student-live-classes', 'Live Classes groups today’s and this week’s classes.'],
+                ['p', '`Live Classes` shows **Happening Now**, **Upcoming Today** and **Later This Week**. Click `Attend` (or `Ongoing` for a class in progress) to open the meeting link.'],
+                ['p', 'If you see **"No meeting link has been set for this class"**, ask your instructor to add one.'],
+                ['shot', 'student-timetable', 'My Timetable shows a Monday-to-Sunday week.'],
+                ['p', '`My Timetable` shows your classes from 8 AM to 8 PM. Use the arrows to move a week at a time. `Change Week` brings you back to this week.'],
+              ],
+            },
+            {
+              id: 'attendance',
+              title: 'Mark your attendance',
+              summary: 'Scan the QR code or type the 6-character code.',
+              screen: 'student-attend-code',
+              blocks: [
+                ['p', 'In class, your instructor or hub manager shows a QR code and a 6-character code. You must be signed in to check in.'],
+                ['h', 'Scan the QR code'],
+                ['steps', [
+                  'Scan the code with your phone camera.',
+                  'Elevate opens and shows **"Checking you in…"**.',
+                  'When you see **"You’re checked in!"** you are done.',
+                ]],
+                ['h', 'Or type the code'],
+                ['shot', 'student-attend-code', 'Enter Session Code.'],
+                ['steps', [
+                  'Click the **Mark Attendance** icon next to your name at the top right (or go to the /attend page).',
+                  'Type the 6-character code shown on screen, for example A4K9WR.',
+                  'Click `Check In`.',
+                ]],
+                ['table', ['Message', 'What to do'], [
+                  ['Already checked in!', 'Nothing. You are already marked present.'],
+                  ['QR code has expired / Code has expired', 'Ask for the current code. Codes last between 5 minutes and 1 hour.'],
+                  ['Session is closed', 'The register has closed. Talk to your instructor.'],
+                  ['Invalid code', 'Check the code and type it again. It never contains 0, O, 1, I or L.'],
+                ]],
+                ['note', 'warn', 'Check in before the register closes', 'When the session is closed, everyone on the course who did not check in is marked absent.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Your profile',
+          articles: [
+            {
+              id: 'blueprint',
+              title: 'Build your Blueprint portfolio',
+              summary: 'The page you send to an employer.',
+              screen: 'student-blueprint',
+              blocks: [
+                ['shot', 'student-blueprint', 'Blueprint with the completion checklist.'],
+                ['p', 'Your Blueprint is a portfolio of your work that you can share with employers. You add **links**: you cannot upload files here.'],
+                ['steps', [
+                  '**About you**: add a `Headline` (up to 20 characters), a short bio, a profile photo link and your location.',
+                  '**How employers reach you**: email, phone and social links such as LinkedIn, GitHub or Behance.',
+                  '**Skills**: key skills (separated by commas), the role you want, availability and languages.',
+                  '**Work history**: click `Add job` for each job.',
+                  '**CV & core documents**: a link to your CV, and a cover letter if you have one.',
+                  '**My work**: click `Add work` for each project, with a link and a cover image.',
+                  'Click `Save changes`, then `Preview` to see it as an employer will.',
+                ]],
+                ['h', 'Publish and share'],
+                ['p', 'You can publish once the **Completion** checklist is done: a bio, a profile photo, at least one piece of work with a cover image on each, a contact or social link, key skills, a CV link and work experience.'],
+                ['p', 'When it says **Published**, anyone with your link can open it without signing in. Use `Copy link` or `Share`, or `Download` it as a PDF.'],
+                ['note', 'tip', 'Image links', 'Photo and cover links must point straight at the image. On postimg, copy the **Direct link**, not the page link.'],
+              ],
+            },
+            {
+              id: 'chats',
+              title: 'Chats and inquiries',
+              summary: 'Message classmates, your instructor and your hub manager.',
+              screen: 'student-chats',
+              blocks: [
+                ['shot', 'student-chats', 'Chats & Inquiries.'],
+                ['steps', [
+                  'Open `Chats / Inquiries`.',
+                  'Pick a conversation under **Course Chats** or **Direct Messages**, or click `Direct Message` to start a new one.',
+                  'Type your message and press **Enter** to send. Press **Shift + Enter** for a new line.',
+                ]],
+                ['ul', [
+                  'You can message classmates on the same course, your instructor and your hub manager.',
+                  'Chats are text only. Share files as links.',
+                  'New messages arrive every 15 seconds. An unread count shows next to Chats in the menu.',
+                ]],
+              ],
+            },
+            {
+              id: 'workshops',
+              title: 'Workshops and podcasts',
+              summary: 'Recorded sessions to watch any time.',
+              screen: 'student-workshops',
+              blocks: [
+                ['shot', 'student-workshops', 'Workshops & Podcasts.'],
+                ['p', 'Search, or use the `All`, `Workshops` and `Podcasts` chips. Click a card to play it in Elevate.'],
+              ],
+            },
+            {
+              id: 'my-profile',
+              title: 'Update your profile',
+              summary: 'Change your name and phone number.',
+              screen: 'student-profile',
+              blocks: [
+                ['shot', 'student-profile', 'My Profile.'],
+                ['steps', [
+                  'Click your name at the top right, then `My Profile`.',
+                  'Click `Edit Profile`.',
+                  'Change your `First Name`, `Last Name` or `Phone Number`.',
+                  'Click `Save Changes`.',
+                ]],
+                ['note', 'info', 'Email, gender and hub', 'Only an administrator can change these. Contact the era92 team if they are wrong.'],
+              ],
+            },
+            {
+              id: 'student-faq',
+              title: 'Student questions',
+              summary: 'Quick answers to common problems.',
+              blocks: [
+                ['h', 'Why can I only see Home and Browse Courses?'],
+                ['p', 'You do not have an approved, paid place on a course yet. Apply from Browse Courses. Once the hub approves you and any first payment is made, the full menu appears.'],
+                ['h', 'Why is my course paused?'],
+                ['p', 'A monthly fee is unpaid. Open `Payments` and pay it. The course opens again immediately.'],
+                ['h', 'Can I take two courses?'],
+                ['p', 'Not at the same time. Talk to your hub if you need to change course.'],
+                ['h', 'My next module will not open.'],
+                ['p', 'Check the message on the module. Usually a lesson in the previous module is not marked complete, or its assignment is not handed in. See [Study an online course](#/student/course-player).'],
+                ['h', 'I missed a deadline. Can I still submit?'],
+                ['p', 'No. Regular assignments close at the due date. Talk to your instructor. Course-player assignments have no deadline.'],
+                ['h', 'Where do my requests go?'],
+                ['p', 'Enrolment requests go to your hub. For anything else, use Chats or [contact the era92 team](#/start/get-help).'],
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    /* ───────────────────────────── INSTRUCTOR ───────────────────────────── */
+    {
+      id: 'instructor',
+      name: 'Instructor',
+      short: 'Instructors',
+      blurb: 'Build your curriculum, set and mark work, and follow how students are doing.',
+      groups: [
+        {
+          name: 'Your portal',
+          articles: [
+            {
+              id: 'overview',
+              title: 'Your instructor portal',
+              summary: 'What is in the menu and what you can see.',
+              screen: 'instructor-dashboard',
+              blocks: [
+                ['p', 'Your menu is built around your courses. You only see the courses, students, submissions and timetable for the courses you are assigned to. If a screen is empty, ask your hub manager or admin to assign you to a course.'],
+                ['table', ['Menu item', 'Use it to'], [
+                  ['Dashboard', 'See today’s classes, attendance and work waiting for marks.'],
+                  ['Academics → Courses', 'Build modules, lessons and quizzes.'],
+                  ['Academics → Timetable', 'See your teaching week.'],
+                  ['Academics → Resources', 'Share materials and create assessments.'],
+                  ['Academics → Online Course Progress', 'Follow online learners and mark course-player work.'],
+                  ['Academics → Announcements', 'See school announcements.'],
+                  ['Academics → Workshops & Podcasts', 'Watch the shared recordings.'],
+                  ['Students', 'See everyone on your courses.'],
+                  ['Performance', 'Rank students by average grade.'],
+                  ['Chats / Inquiries', 'Message your students.'],
+                  ['Reports', 'Grades and submission rates across your classes.'],
+                ]],
+                ['note', 'tip', 'All Submissions is not in the menu', 'Reach the marking page from the Dashboard (`View All Submissions` or `Review`) or by clicking a submission in the notification bell.'],
+              ],
+            },
+            {
+              id: 'dashboard',
+              title: 'Your dashboard',
+              summary: 'Attendance, top performers and work to mark.',
+              screen: 'instructor-dashboard',
+              blocks: [
+                ['shot', 'instructor-dashboard', 'The instructor dashboard.'],
+                ['ul', [
+                  '**Top strip**: total enrolled, who checked in today (or at the last session), absent and inactive students.',
+                  '**This Week’s Attendance**: check-ins over the last 7 days.',
+                  '**Top Performers**: the 4 best average grades. Green is 80% and above, amber 60% and above, red below.',
+                  '**Recent Submissions**: the latest work. `Review` opens it for marking.',
+                  '**Today’s Classes** and a calendar.',
+                  '**Quick Actions**: `Create Assignment`, `View All Submissions`, `Upload Resources`.',
+                ]],
+                ['p', 'The year selector at the top changes the Top Performers figures only.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Teaching',
+          articles: [
+            {
+              id: 'curriculum',
+              title: 'Build your course curriculum',
+              summary: 'Add modules, lessons, videos and quizzes.',
+              screen: 'instructor-courses',
+              blocks: [
+                ['shot', 'instructor-courses', 'My Classes lists the courses you teach.'],
+                ['p', 'Open `Academics` → `Courses`. The page is called **My Classes**. Click `Manage →` on a course to open its curriculum.'],
+                ['h', 'Add a module (a week)'],
+                ['steps', [
+                  'Click `Add Module`.',
+                  'Set the `Module #` (1, 2, 3…), a `Title` such as “Introduction to Design”, and an optional description.',
+                  'Click `Add Module`.',
+                ]],
+                ['h', 'Add a lesson or other content'],
+                ['steps', [
+                  'Click `Add Content` on the module.',
+                  'Give it a `Title` and pick a `Type`: Lesson, Video, Assignment or Resource.',
+                  'Optional: paste a `YouTube Video URL`. It plays inside the lesson for students.',
+                  'Write the **Lesson Notes** (or **Assignment Instructions**). You can add headings, lists, images, code and links.',
+                  'Tick `Students must submit work for this item` if students should hand something in instead of just marking it complete.',
+                  'Set the `Duration (minutes)` and click `Add Content`.',
+                ]],
+                ['h', 'Add a quiz to any item'],
+                ['p', 'Under **Completion Quiz**, set a `Passing Score (%)` (70 by default) and click `+ Add Question`. Choose **Multiple Choice** (2–5 options; pick the right one with the radio button) or **True / False**. Students must pass the quiz to complete the item and unlock the next module.'],
+                ['note', 'warn', 'Deleting is permanent', 'Deleting a module removes its lessons **and every submission and progress record** students made on them. Deleting a single content item happens straight away, with no confirmation.'],
+                ['h', 'Good to know'],
+                ['ul', [
+                  'Students cannot hand in an Assignment item until they finish the module’s other items.',
+                  'Work handed in through the course player is marked in [Online Course Progress](#/instructor/online-progress).',
+                  'Only admins can reorder modules or mark a lesson complete for a student. Ask your hub manager if a student is stuck.',
+                ]],
+              ],
+            },
+            {
+              id: 'create-assessment',
+              title: 'Create an assessment',
+              summary: 'Set work with a due date and a max score.',
+              screen: 'instructor-resources',
+              blocks: [
+                ['steps', [
+                  'Open `Academics` → `Resources` and choose the `Assignments` tab (or click `Create Assignment` on the Dashboard).',
+                  'Click `Create Assessment`.',
+                  'Fill in `Assignment Title`, `Course` and `Due Date`.',
+                  'Optional: pick a hub under `Assign to specific hub` to send it to that hub only. Leave it on “All hubs” for everyone on the course.',
+                  'Set the `Max Score` (100 by default) and write the instructions.',
+                  'Turn on `Milestone Assignment` if students must hand in a PDF or link.',
+                  'Click `Create Assessment`.',
+                ]],
+                ['p', 'Every student it is sent to gets a **New Assignment** notification.'],
+                ['p', 'The list shows each assessment’s due date and how many students have submitted. **Open** means the due date has not passed; **Closed** means it has. Click the pencil to edit the title, due date, max score, hub or instructions.'],
+                ['note', 'warn', 'Share files as links', 'Files picked under `Attach resources` are not saved yet. Put the link to your brief in the instructions, or add it under Resources. Assessments cannot be deleted.'],
+                ['note', 'info', 'Students cannot submit late', 'Elevate refuses work after the due date, so set a realistic one.'],
+              ],
+            },
+            {
+              id: 'grading',
+              title: 'Mark submissions',
+              summary: 'Score, give feedback, and the 24-hour edit window.',
+              screen: 'instructor-submissions',
+              blocks: [
+                ['shot', 'instructor-submissions', 'All Submissions.'],
+                ['steps', [
+                  'From the Dashboard click `View All Submissions` (or click a submission in the bell).',
+                  'Ungraded work is at the top. Filter by status, hub or assignment if you need to.',
+                  'Click `Grade` on a row.',
+                  'Open the work with `Open Link` or `Download`.',
+                  'Enter a `Score` between 0 and the assignment’s max score, and write `Feedback / Comments`.',
+                  'Click `Save Grade`.',
+                ]],
+                ['note', 'warn', 'You have 24 hours to change a grade', 'After 24 hours from the first time you graded it, the button shows **Locked**. Editing does not restart the clock. Once graded, the student cannot resubmit.'],
+                ['note', 'warn', 'Careful with the thumbs-up', 'The `Send encouragement` thumbs-up also marks the work as graded and starts the 24-hour clock, without a score. If you use it, enter a score within 24 hours.'],
+                ['p', 'Course-player work is marked separately. See the next guide.'],
+              ],
+            },
+            {
+              id: 'online-progress',
+              title: 'Online course progress and points',
+              summary: 'Follow online learners and approve their projects.',
+              screen: 'instructor-online-progress',
+              blocks: [
+                ['shot', 'instructor-online-progress', 'Online Course Progress.'],
+                ['p', 'Open `Academics` → `Online Course Progress`. The badge at the top shows how many students are active right now.'],
+                ['table', ['Tab', 'What it shows'], [
+                  ['Progress', 'Each student’s last check-in, number of check-ins, progress and assignments. **Needs Attention** lists students who have not checked in for a week or more.'],
+                  ['Submissions', 'Projects handed in through the course player, unapproved first.'],
+                  ['Performance', 'A points leaderboard.'],
+                ]],
+                ['h', 'Mark and approve a project'],
+                ['steps', [
+                  'Open the **Submissions** tab and click `View submission` to check the work.',
+                  'Click `Mark & Approve`.',
+                  'Enter a `Mark (0-100)` and optional feedback. The student sees it on their results.',
+                  'Click `Save & Approve`.',
+                ]],
+                ['p', 'Points: handing in earns 10 straight away; your mark is worth up to 90 more. A mark of 80% gives 10 + 72 = 82 points. You can change the mark with `Update` for 24 hours, then it shows **Locked**.'],
+              ],
+            },
+            {
+              id: 'resources',
+              title: 'Share resources',
+              summary: 'Add links to documents, videos and tools.',
+              screen: 'instructor-resources',
+              blocks: [
+                ['shot', 'instructor-resources', 'Resources.'],
+                ['steps', [
+                  'Open `Academics` → `Resources` and pick the course chip.',
+                  'Click `Add Resource`.',
+                  'Enter a `Title`, choose a `Type` (Document, Video, Audio, Image, Link or Software), the `Course`, and the `URL / Link`.',
+                  'Click `Add Resource`.',
+                ]],
+                ['p', 'Students find it under **Assessments → Resources**. You can see how many times each one was viewed and downloaded.'],
+                ['note', 'info', 'Links, not uploads', 'Resources are links. Put the file on Google Drive (shared with “Anyone with the link”) or YouTube, then paste the link. Deleting a resource happens straight away.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Students and classes',
+          articles: [
+            {
+              id: 'students',
+              title: 'Students and performance',
+              summary: 'Who is on your courses and how they rank.',
+              screen: 'instructor-students',
+              blocks: [
+                ['shot', 'instructor-students', 'Students on your courses.'],
+                ['p', '`Students` lists everyone on your courses with their progress (green 80%+, amber 40%+, red below). Search, or click a course chip to filter. `View Profile` opens a student’s details, courses and attendance.'],
+                ['note', 'warn', 'Leave account changes to the hub', 'The student profile shows buttons such as Reset Password and Deactivate Account. Leave these to the hub manager.'],
+                ['shot', 'instructor-performance', 'Performance ranks students by average grade.'],
+                ['h', 'How the average grade is worked out'],
+                ['ul', [
+                  'Each graded assignment counts as score ÷ max score.',
+                  'The total is divided by **all** active assignments on the course, so missing work counts as 0.',
+                  'Course-player points are not included. They are on Online Course Progress.',
+                ]],
+              ],
+            },
+            {
+              id: 'timetable',
+              title: 'Timetable and live classes',
+              summary: 'Your teaching week and meeting links.',
+              screen: 'instructor-timetable',
+              blocks: [
+                ['shot', 'instructor-timetable', 'Your weekly schedule.'],
+                ['p', '`Academics` → `Timetable` shows your classes across all your courses, Monday to Sunday, with the hub for each. Use the arrows to change week.'],
+                ['p', 'The timetable is set by the hub manager. To add or move a class, or to add a meeting link students can join, ask your hub manager. They set the link on the timetable session.'],
+                ['note', 'warn', 'About the “Live Class” button', 'The `Live Class` button on a course card opens a **new** Google Meet. Students will not know that link unless you send it to them in Chats. Using the meeting link on the timetable session is more reliable.'],
+              ],
+            },
+            {
+              id: 'chats',
+              title: 'Chat with students',
+              summary: 'Direct messages and course chats.',
+              screen: 'instructor-chats',
+              blocks: [
+                ['steps', [
+                  'Open `Chats / Inquiries` and click `Direct Message`.',
+                  'Search for a student on your courses and click their name.',
+                  'Type and press **Enter** to send (**Shift + Enter** for a new line).',
+                ]],
+                ['p', 'Messages refresh every 15 seconds. Course group chats appear under **Course Chats** when one has been set up.'],
+              ],
+            },
+            {
+              id: 'reports',
+              title: 'Reports and analytics',
+              summary: 'Grades and submission rates by class.',
+              screen: 'instructor-reports',
+              blocks: [
+                ['shot', 'instructor-reports', 'Reports & Analytics.'],
+                ['ul', [
+                  '**Stat cards**: total students, average grade, submission rate and pending reviews.',
+                  '**Submission Rate by Class**: your top 5 classes.',
+                  '**Grade Distribution**: A (80–100%), B (65–79%), C (50–64%) and below 50%.',
+                  '**Assignment Submission Analytics**: submitted and graded % per assignment.',
+                  '**Class Performance Overview**: a table per class.',
+                ]],
+                ['note', 'info', 'Export', 'The `Export Report` button does not download anything yet.'],
+              ],
+            },
+            {
+              id: 'announcements',
+              title: 'Announcements and workshops',
+              summary: 'What you can see and who posts.',
+              screen: 'instructor-announcements',
+              blocks: [
+                ['p', '`Announcements` shows the school’s current announcements. Posting from an instructor account is not switched on yet. Ask your hub manager to post for your students. You can always message your students directly in Chats.'],
+                ['p', '`Workshops & Podcasts` lets you watch the shared recordings. To add one, send the YouTube link to your hub manager.'],
+              ],
+            },
+            {
+              id: 'instructor-faq',
+              title: 'Instructor questions',
+              summary: 'Quick answers.',
+              blocks: [
+                ['h', 'My courses page is empty.'],
+                ['p', 'You are not assigned to a course yet. Ask your hub manager or admin.'],
+                ['h', 'Can I take attendance?'],
+                ['p', 'Attendance sessions are run by the hub manager. Ask them to open the register at the start of your class.'],
+                ['h', 'I made a mistake in a grade more than a day ago.'],
+                ['p', 'Grades lock after 24 hours. Ask your hub manager or admin to help.'],
+                ['h', 'A student cannot get past a module.'],
+                ['p', 'Ask your hub manager. They can tick an item as complete for that student.'],
+              ],
+            },
+          ],
+        },
+      ],
+    },
+
+    /* ───────────────────────────── HUB MANAGER ───────────────────────────── */
+    {
+      id: 'hub-manager',
+      name: 'Hub Manager',
+      short: 'Hub managers',
+      blurb: 'Approve students, plan the week, take attendance and keep your hub on track.',
+      groups: [
+        {
+          name: 'Your portal',
+          articles: [
+            {
+              id: 'overview',
+              title: 'Your hub manager portal',
+              summary: 'What you manage and what you can see.',
+              screen: 'hubmanager-dashboard',
+              blocks: [
+                ['p', 'You run one learning hub. Most screens show only your hub’s students and data, but a few cover every hub. Use this table so you know which is which.'],
+                ['table', ['Area', 'What you see'], [
+                  ['Students, Timetable, Performance, Blueprints, Dashboard', 'Your hub only'],
+                  ['Online check-ins and online course progress', 'Your hub only'],
+                  ['New attendance sessions and contacts', 'Your hub only (the hub is filled in and locked)'],
+                  ['Courses', 'Every course. They are shared by all hubs'],
+                  ['Enrolment requests', 'Requests from every hub'],
+                  ['Payments and Who owes', 'Every hub'],
+                  ['Attendance session history, Community Reach', 'Every hub (filter by hub where offered)'],
+                  ['Announcements', 'Sent to all students in every hub'],
+                ]],
+                ['note', 'warn', 'Courses are shared', 'Changes you make to a course (its fee, start date, modules or enrolment switch) affect that course in every hub.'],
+                ['p', 'Job Placements shows a lock: it is not available yet.'],
+              ],
+            },
+            {
+              id: 'dashboard',
+              title: 'Your hub dashboard',
+              summary: 'Students, attendance and today’s classes.',
+              screen: 'hubmanager-dashboard',
+              blocks: [
+                ['shot', 'hubmanager-dashboard', 'The hub manager dashboard.'],
+                ['ul', [
+                  '**Total Students**, **Checked In Today** (or the last session), **Absent** and **Active Students**.',
+                  '**Attendance: Past 7 Days** chart.',
+                  '**Top Performers** and **Top Enrolled Courses** in your hub.',
+                  '**Recent Students**: the 5 newest. Click one to open their profile.',
+                  '**Classes Today** and **Quick Access** tiles for Students, Timetable, Attendance and Announcements.',
+                ]],
+                ['note', 'info', 'Who counts as active?', 'A student who was active on **2 or more different days in the last 30 days**: checking in at the hub or in the online course player.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Students',
+          articles: [
+            {
+              id: 'approve',
+              title: 'Approve enrolment requests',
+              summary: 'Let students onto a course, or turn them down.',
+              screen: 'hubmanager-students',
+              blocks: [
+                ['p', 'When a student applies for a course, a request waits for you. You also get a **New Enrollment Request** notification.'],
+                ['steps', [
+                  'Open `Students` and click the **Registrations** tab.',
+                  'Choose `Enrollment requests`. Click a row to look at the person first if you need to.',
+                  'Click `Approve`, then `Approve` again to confirm. Or click `Reject`, add an optional reason, and click `Turn down`.',
+                ]],
+                ['p', 'An approved student gets a confirmation email. If the course charges a fee, their first month becomes payable and the course opens once they pay. A student who is turned down is told and can apply for a different course; anything they already paid stays on their account.'],
+                ['p', 'The same requests appear at the top of `Courses`.'],
+                ['h', 'Registered, not enrolled'],
+                ['p', 'The `Registered, not enrolled` chip lists people from your hub who made an account but never applied for a course. Nothing is waiting on you here. Use their phone or email to follow up.'],
+                ['note', 'info', 'Requests from other hubs', 'The request list includes every hub. Check the **Hub** column and only decide on your own hub’s students.'],
+              ],
+            },
+            {
+              id: 'students',
+              title: 'Manage students',
+              summary: 'Search, add a student, and edit a profile.',
+              screen: 'hubmanager-students',
+              blocks: [
+                ['shot', 'hubmanager-students', 'Students in your hub.'],
+                ['p', 'Click a tile (**Total Students**, **Registered Today**, **This Week**) to filter. Search by name, email or phone, and filter by course, status or date range. Students who signed up today have a green **New** chip.'],
+                ['h', 'Add a student'],
+                ['steps', [
+                  'Click `Add Student`.',
+                  'Fill in name, phone, gender, date of birth, email and a password. The hub is your hub.',
+                  'Choose at least one course and leave `Activate this user account` on.',
+                  'Save. The student confirms their email with a code the first time they sign in.',
+                ]],
+                ['note', 'warn', 'Import is not working yet', 'The `Import` button accepts a file but does not add anyone yet (it reports “0 students added”). Add students one by one for now.'],
+                ['h', 'On a student’s profile'],
+                ['table', ['Button', 'What it does'], [
+                  ['Enroll in Course', 'Put the student on a course.'],
+                  ['Remove', 'Take them off a course. Their progress is kept so you can add them back.'],
+                  ['Edit Profile', 'Change name, phone, date of birth and computer access.'],
+                  ['Reset Password', 'Set a new password they can use straight away (at least 8 characters).'],
+                  ['Deactivate Account', 'Stop them signing in. You must type their email to confirm; pasting is blocked.'],
+                  ['Status', 'Active, Completed, Graduated, On Break or Dropped. This is for your records; it does not block sign-in.'],
+                ]],
+              ],
+            },
+            {
+              id: 'payments',
+              title: 'Payments and who owes',
+              summary: 'Follow fees and call students who are behind.',
+              screen: 'hubmanager-payments',
+              blocks: [
+                ['shot', 'hubmanager-payments', 'Payments.'],
+                ['p', 'The **Payments** tab lists every payment. Click a tile (Collected, Paid, Pending, Failed) to filter, search by student code, reference or phone, and click `Export` for a CSV. Click a row to see what it was for and its Flutterwave reference.'],
+                ['p', 'The **Who owes** tab lists students behind on a paid course, paused ones first. Tap a phone number to call.'],
+                ['table', ['Status', 'Meaning'], [
+                  ['Paused', 'A month is unpaid, so the course is closed to the student until they pay.'],
+                  ['Due in N days', 'A payment is coming up.'],
+                ]],
+                ['note', 'info', 'What you cannot change', 'The registration fee amount is set by an admin, and refunds are done by a super admin.'],
+              ],
+            },
+            {
+              id: 'blueprints',
+              title: 'Student Blueprints',
+              summary: 'See who has built and published a portfolio.',
+              screen: 'hubmanager-blueprints',
+              blocks: [
+                ['shot', 'hubmanager-blueprints', 'Student Blueprints.'],
+                ['p', 'Every student in your hub is listed, even those who have not started. Filter by **Not started**, **In progress** or **Complete** to find who needs a nudge. **Live** in the Shared column means the student published it. Click a row to open it, and `Download PDF` to save a copy.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Teaching and classes',
+          articles: [
+            {
+              id: 'courses',
+              title: 'Courses and curriculum',
+              summary: 'Create a course, set its fee and open enrolment.',
+              screen: 'hubmanager-courses',
+              blocks: [
+                ['shot', 'hubmanager-courses', 'Course Management.'],
+                ['h', 'Create or edit a course'],
+                ['steps', [
+                  'Open `Academics` → `Courses` and click `New Course` (or the edit icon on a card).',
+                  'Enter the `Course Title`, description and `Instructor / Tutor`.',
+                  'Set `Max Students` and, for self-paced courses, a `Start Date`. Modules then open one per week from that date.',
+                  'Turn on `Online course` if enrolled students should use the online course player.',
+                  'Turn on `Chargeable course` and enter the monthly `Course fee (UGX)` if students pay. Leave it off for a free course.',
+                  'Add an optional `Course image link`, then click `Create Course` or `Save Changes`.',
+                ]],
+                ['p', 'Use the `Open enrolment` / `Close enrolment` switch on a card to control whether students can apply.'],
+                ['h', 'Inside a course'],
+                ['ul', [
+                  '`Enroll Student`: search for a student and add them directly.',
+                  '`Add Module` and `Add Content`: build the curriculum, just like instructors do. Drag to reorder.',
+                  '**Unblock a stuck student**: use the progress icon on a module to tick an item as complete for one student. Only use this when something is genuinely broken for them.',
+                  '`Preview as student`: see the course as a student does.',
+                ]],
+                ['note', 'warn', 'Deleting a course', 'A course with enrolments, check-ins or submissions cannot be deleted. Close enrolment instead.'],
+              ],
+            },
+            {
+              id: 'timetable',
+              title: 'Plan the timetable',
+              summary: 'Add class sessions with a room and meeting link.',
+              screen: 'hubmanager-timetable',
+              blocks: [
+                ['shot', 'hubmanager-timetable', 'Timetable.'],
+                ['steps', [
+                  'Open `Academics` → `Timetable` and click `Add Session`.',
+                  'Choose the `Course`, **your hub**, the `Day of Week`, and `Start Time` / `End Time` in 24-hour format (for example 09:00).',
+                  'Type the `Instructor Name` and `Room / Location`.',
+                  'Paste a `Meeting Link (Zoom / Google Meet)` if the class is online. Students join from Live Classes.',
+                  'Click `Add Session`.',
+                ]],
+                ['note', 'warn', 'Always choose your hub', 'You only see sessions for your own hub. A session saved with no hub, or another hub, will not show in your list after you save it.'],
+                ['p', 'Use the pencil to edit and the bin to remove a session.'],
+              ],
+            },
+            {
+              id: 'attendance',
+              title: 'Take attendance with a QR code',
+              summary: 'Open a session, show the code, close the register.',
+              screen: 'hubmanager-attendance',
+              blocks: [
+                ['shot', 'hubmanager-attendance', 'Attendance and session history.'],
+                ['steps', [
+                  'Open `Academics` → `Attendance` and click `New Session`.',
+                  'Type a `Session Label`, for example “22nd November – Morning class attendance”.',
+                  'Choose how long the QR lasts: 5, 10, 15 or 30 minutes, or 1 hour.',
+                  'Choose **Course** and pick the course (or **Event** and pick the event). Your hub is already filled in.',
+                  'Click `Create & Show QR`.',
+                  'Put the QR and the 6-character **Session Code** on the screen. Students scan it, or type the code at /attend.',
+                  'Watch **Live Check-ins** fill up (it refreshes every 5 seconds).',
+                  'Click `Close Session` when the register is done.',
+                ]],
+                ['note', 'warn', 'Closing marks absences', 'When you close a session, every student on that course in your hub who did not check in is recorded as **Absent**.'],
+                ['h', 'Look back'],
+                ['ul', [
+                  '**Session History**: every recent session with its code, date, number checked in and status (Active, Expired, Closed). Use the eye icon to see who checked in.',
+                  '**Attendance History**: search a student to see every session they attended or missed.',
+                  '**Online Check-ins**: daily check-ins from students studying online.',
+                ]],
+              ],
+            },
+            {
+              id: 'events',
+              title: 'Event check-ins and community reach',
+              summary: 'Log guests and walk-ins who are not students yet.',
+              blocks: [
+                ['h', 'Event check-in for the public'],
+                ['steps', [
+                  'Add the event first under `Announcements` → `Add Event`.',
+                  'In Attendance click `New Session`, choose **Event**, pick the event, and choose **Other people (public, no login)**.',
+                  'Show the QR. Guests scan it and enter their name, and optionally email and phone. People without a camera go to /events/checkin and type the code.',
+                  'Use `Export CSV` on the **Event Check-ins** tab to download the list.',
+                ]],
+                ['p', 'Guests are matched by email or phone, so repeat visitors are not duplicated. Anyone who is already a student is recognised and skipped.'],
+                ['h', 'Log a contact by hand'],
+                ['steps', [
+                  'Click `Add Contact` on the Attendance page.',
+                  'Enter `Full Name`, phone and email, and how you reached them: Walk-in, Event, Referral, Social Media or Other.',
+                  'Save. It appears under **Community Reach**.',
+                ]],
+              ],
+            },
+            {
+              id: 'online-progress',
+              title: 'Online course progress',
+              summary: 'Follow online learners and mark their projects.',
+              screen: 'hubmanager-online-progress',
+              blocks: [
+                ['shot', 'hubmanager-online-progress', 'Hub Online Course Progress.'],
+                ['p', 'This page shows your hub’s online learners in three tabs: **Progress**, **Submissions** and **Performance**. **Needs Attention** lists students who have not checked in for a week or more, worth a follow-up call.'],
+                ['steps', [
+                  'Open the **Submissions** tab. Unapproved work is first.',
+                  'Click `Mark & Approve`, enter a `Mark (0-100)` and optional feedback.',
+                  'Click `Save & Approve`.',
+                ]],
+                ['p', 'Students earn 10 points for handing in and up to 90 more from your mark. Marks can be changed for 24 hours, then they lock.'],
+              ],
+            },
+            {
+              id: 'announcements',
+              title: 'Announcements and calendar events',
+              summary: 'Post a message to all students.',
+              screen: 'hubmanager-announcements',
+              blocks: [
+                ['shot', 'hubmanager-announcements', 'Announcements & Events.'],
+                ['steps', [
+                  'Open `Academics` → `Announcements` and click `New Announcement`.',
+                  'Enter a `Title` and `Message`, and pick a `Type`: Info, Warning, Event or Success.',
+                  'Optional: an `Expires On` date, and `Pin to top of dashboard`.',
+                  'Click `Send to All Students`.',
+                ]],
+                ['note', 'warn', 'It goes to every hub', 'Announcements reach all students in all hubs. Mention your hub in the title if it is only for your students.'],
+                ['p', 'Use the switch on a card to hide or show it, the pin to pin it, and the bin to delete it. The **Calendar Events** tab adds dates to students’ calendars; those events also appear when you start an event check-in.'],
+              ],
+            },
+            {
+              id: 'workshops',
+              title: 'Workshops and podcasts',
+              summary: 'Add YouTube recordings for students.',
+              screen: 'hubmanager-workshops',
+              blocks: [
+                ['steps', [
+                  'Open `Academics` → `Workshops & Podcasts` and click `Add Content`.',
+                  'Choose **Workshop (Video)** or **Podcast**.',
+                  'Enter a `Title`, a description and the `YouTube URL`.',
+                  'Optional: a course tag and hub. Save.',
+                ]],
+                ['p', 'Students and instructors can watch it straight away. Use the edit and delete icons to change it later.'],
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Insights',
+          articles: [
+            {
+              id: 'performance',
+              title: 'Performance and reports',
+              summary: 'Rank students and read your hub’s numbers.',
+              screen: 'hubmanager-reports',
+              blocks: [
+                ['shot', 'hubmanager-performance', 'Hub Performance.'],
+                ['p', '`Performance` ranks your hub’s students by average grade. Missing assignments count as 0, so a student who skips work falls down the list.'],
+                ['shot', 'hubmanager-reports', 'Hub Reports.'],
+                ['p', '`Reports` shows totals, enrolment by course and a student list for a time range (All Time, This Year, Quarter, Month, Week). `Export CSV` downloads every student in the range.'],
+                ['note', 'warn', 'Hub Reports is still being finished', 'Some figures may be incomplete. Check important numbers against the Dashboard and Students pages.'],
+              ],
+            },
+            {
+              id: 'chats',
+              title: 'Chats',
+              summary: 'Message students and staff in your hub.',
+              screen: 'hubmanager-chats',
+              blocks: [
+                ['p', 'Open `Chats / Inquiries` and click `Direct Message`. You can message students in your hub and active staff in your hub. Press **Enter** to send. Messages refresh every 15 seconds.'],
+              ],
+            },
+            {
+              id: 'hub-faq',
+              title: 'Hub manager questions',
+              summary: 'Quick answers.',
+              blocks: [
+                ['h', 'A session I added is missing from the timetable.'],
+                ['p', 'It was probably saved without your hub. Add it again and choose your hub.'],
+                ['h', 'A student says their course is paused.'],
+                ['p', 'Check **Payments → Who owes**. Once they pay, the course opens immediately.'],
+                ['h', 'A student is stuck on a module.'],
+                ['p', 'Open the course, find the module, and use the progress icon to tick the item as complete for that student.'],
+                ['h', 'Can I import a spreadsheet of students?'],
+                ['p', 'Not yet. Add students one at a time with `Add Student`.'],
+                ['h', 'Can I change the registration fee or refund a payment?'],
+                ['p', 'No. Ask an admin to change the fee and a super admin to refund.'],
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
+};

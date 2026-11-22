@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elevate Help</title>
+  <meta name="description" content="Step-by-step guides for students, instructors and hub managers on the era92 Elevate learning portal." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script>
+    // Apply the saved theme before paint so the page never flashes.
+    (function () {
+      try {
+        var t = localStorage.getItem('elevate-docs-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <a class="brand" href="#/" aria-label="Elevate Help home">
+        <img class="brand__logo brand__logo--light" src="assets/img/elevate-logo.png" alt="era92 elevate" />
+        <img class="brand__logo brand__logo--dark" src="assets/img/elevate-logo-dark.png" alt="era92 elevate" />
+        <span class="brand__tag">Help</span>
+      </a>
+
+      <nav class="topnav" id="topnav" aria-label="Roles"></nav>
+
+      <div class="topbar__actions">
+        <button class="search-trigger" id="searchOpen" aria-label="Search the guides">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="search-trigger__label">Search guides</span>
+          <kbd>/</kbd>
+        </button>
+        <button class="icon-btn" id="themeBtn" aria-label="Switch light or dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>era92 Group · Elevate Help</span>
+      <span class="footer__links">
+        <a href="#/start/get-help">Contact support</a>
+        <a href="#/start/sign-in">Sign-in help</a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Search dialog -->
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search the guides" hidden>
+    <div class="modal__panel search">
+      <div class="search__field">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Try “attendance”, “pay”, “grade”…" autocomplete="off" aria-controls="searchResults" />
+        <button class="search__esc" id="searchClose">Esc</button>
+      </div>
+      <ul class="search__results" id="searchResults" role="listbox"></ul>
+    </div>
+  </div>
+
+  <!-- Screenshot viewer -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <figure>
+      <img id="lightboxImg" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
