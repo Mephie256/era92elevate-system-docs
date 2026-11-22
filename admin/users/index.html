@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create users and set roles (Admin) · Elevate Help</title>
+  <meta name="description" content="Add an instructor, hub manager, student or admin account. A step-by-step Elevate guide for admins, with screenshots." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://mephie256.github.io/era92elevate-system-docs/admin/users/" />
+  <meta name="theme-color" content="#faf6ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#131418" media="(prefers-color-scheme: dark)" />
+  <meta property="og:site_name" content="Elevate Help" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Create users and set roles (Admin) · Elevate Help" />
+  <meta property="og:description" content="Add an instructor, hub manager, student or admin account. A step-by-step Elevate guide for admins, with screenshots." />
+  <meta property="og:url" content="https://mephie256.github.io/era92elevate-system-docs/admin/users/" />
+  <meta property="og:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Elevate Help: guides for every role on the era92 Elevate portal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Create users and set roles (Admin) · Elevate Help" />
+  <meta name="twitter:description" content="Add an instructor, hub manager, student or admin account. A step-by-step Elevate guide for admins, with screenshots." />
+  <meta name="twitter:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <link rel="icon" type="image/png" href="../../favicon.png" />
+  <link rel="apple-touch-icon" href="../../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <script>
+    // Apply the saved theme before paint so the page never flashes.
+    (function () {
+      try {
+        var t = localStorage.getItem('elevate-docs-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Help","item":"https://mephie256.github.io/era92elevate-system-docs/"},{"@type":"ListItem","position":2,"name":"Admin","item":"https://mephie256.github.io/era92elevate-system-docs/admin/"},{"@type":"ListItem","position":3,"name":"Create users and set roles","item":"https://mephie256.github.io/era92elevate-system-docs/admin/users/"}]},{"@type":"TechArticle","headline":"Create users and set roles","description":"Add an instructor, hub manager, student or admin account. A step-by-step Elevate guide for admins, with screenshots.","url":"https://mephie256.github.io/era92elevate-system-docs/admin/users/","image":"https://mephie256.github.io/era92elevate-system-docs/assets/screens/admin-users.webp","articleSection":"Admin","inLanguage":"en","dateModified":"2026-11-22","author":{"@type":"Organization","name":"era92 Elevate","url":"https://mephie256.github.io/era92elevate-system-docs/","logo":"https://mephie256.github.io/era92elevate-system-docs/favicon.png","email":"support@era92elevate.org","telephone":"+256745887386"},"publisher":{"@type":"Organization","name":"era92 Elevate","url":"https://mephie256.github.io/era92elevate-system-docs/","logo":"https://mephie256.github.io/era92elevate-system-docs/favicon.png","email":"support@era92elevate.org","telephone":"+256745887386"},"isPartOf":{"@id":"https://mephie256.github.io/era92elevate-system-docs/#website"}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <a class="brand" href="../../index.html" aria-label="Elevate Help home">
+        <img class="brand__logo brand__logo--light" src="../../assets/img/elevate-logo.png" alt="era92 elevate" width="263" height="72" />
+        <img class="brand__logo brand__logo--dark" src="../../assets/img/elevate-logo-dark.png" alt="era92 elevate" width="2001" height="553" />
+        <span class="brand__tag">Help</span>
+      </a>
+
+      <nav class="topnav" id="topnav" aria-label="Roles"><a href="../../start/index.html">Start here</a><a href="../../student/index.html">Student</a><a href="../../instructor/index.html">Instructor</a><a href="../../hub-manager/index.html">Hub Manager</a><a href="../../admin/index.html" aria-current="true">Admin</a></nav>
+
+      <div class="topbar__actions">
+        <button class="search-trigger" id="searchOpen" type="button" aria-label="Search the guides">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="search-trigger__label">Search guides</span>
+          <kbd>/</kbd>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="main" tabindex="-1"><div class="docs"><aside class="sidebar" id="sidebar" aria-label="Admin guides"><nav class="role-switch" aria-label="Choose a role"><a href="../../start/index.html">Start here</a><a href="../../student/index.html">Student</a><a href="../../instructor/index.html">Instructor</a><a href="../../hub-manager/index.html">Hub Manager</a><a href="../../admin/index.html" aria-current="true">Admin</a></nav><nav aria-label="Admin guides"><div class="nav-group"><div class="nav-group__title">Your portal</div><a href="../../admin/overview/index.html">Your admin portal</a><a href="../../admin/dashboard/index.html">Your admin dashboard</a></div><div class="nav-group"><div class="nav-group__title">People</div><a href="../../admin/users/index.html" aria-current="page">Create users and set roles</a><a href="../../admin/registrations/index.html">Approve enrolments across all hubs</a><a href="../../admin/students/index.html">Find and manage students</a></div><div class="nav-group"><div class="nav-group__title">Hubs, courses and classes</div><a href="../../admin/hubs/index.html">Manage learning hubs</a><a href="../../admin/courses/index.html">Courses and curriculum</a><a href="../../admin/attendance/index.html">Timetable and attendance for every hub</a><a href="../../admin/content/index.html">Assessments, announcements and workshops</a></div><div class="nav-group"><div class="nav-group__title">Money and results</div><a href="../../admin/payments/index.html">Payments, the registration fee and refunds</a><a href="../../admin/job-placements/index.html">Record job placements</a><a href="../../admin/reports/index.html">Reports, performance and blueprints</a><a href="../../admin/admin-faq/index.html">Admin questions</a></div></nav></aside><article class="content article"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Help</a><span aria-hidden="true">/</span><a href="../../admin/index.html">Admin</a><span aria-hidden="true">/</span><span>People</span></nav><span class="role-pill role-pill--admin">Admin</span><h1 style="margin-top:14px">Create users and set roles</h1><p class="summary">Add an instructor, hub manager, student or admin account.</p><div class="article__body"><figure class="shot"><button class="shot__frame" type="button" data-shot="admin-users" data-cap="Users &amp; Roles, filtered to three accounts." aria-label="Enlarge screenshot: Users &amp; Roles, filtered to three accounts."><span class="shot__bar" aria-hidden="true"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__tab"><img src="../../favicon.png" alt="" width="14" height="14" />Users &amp; Roles · Elevate</span></span><img src="../../assets/screens/admin-users.webp" alt="Users &amp; Roles, filtered to three accounts." width="1440" height="900" fetchpriority="high" /></button><figcaption>Users &amp; Roles, filtered to three accounts.</figcaption></figure><ol class="steps"><li>Open <span class="ui">Users &amp; Roles</span> and click <span class="ui">Add User</span>.</li><li>Enter <span class="ui">First Name</span>, <span class="ui">Last Name</span> and <span class="ui">Email</span>. The email becomes their username.</li><li>Choose a <span class="ui">Role</span>: Admin, Hub Manager, Trainer (instructor) or Student.</li><li>For a <strong>Student</strong> or <strong>Hub Manager</strong>, choose their <span class="ui">Hub</span>. For a <strong>Student</strong>, also pick at least one course under <span class="ui">Enroll in courses</span>. For a <strong>Trainer</strong>, pick <span class="ui">Courses to teach</span>; they become the instructor on each one.</li><li>Set a <span class="ui">Password</span> of at least 8 characters and leave <span class="ui">Activate this user account</span> ticked.</li><li>Click <span class="ui">Save</span>.</li></ol><p>The new person gets a 6-digit code by email and must confirm their address the first time they sign in, even though you created the account.</p><h2 id="find-and-edit-a-user">Find and edit a user</h2><p>Search by name or username, or filter by role and status. Click the pencil to edit. You cannot change someone’s email; create a new account instead. Leave <span class="ui">New Password</span> blank to keep their current password.</p><h2 id="reset-a-password-or-deactivate-an-account">Reset a password or deactivate an account</h2><ol class="steps"><li>Click the person to open <strong>User Detail</strong>.</li><li>Under <strong>Actions</strong>, click <span class="ui">Reset Password</span> and set a new one, or click <span class="ui">Deactivate</span>.</li><li>To deactivate, type their username exactly (pasting is blocked) and confirm.</li></ol><p>A deactivated person loses access straight away. Click <span class="ui">Activate</span> to let them back in.</p><div class="note note--warn" role="note"><span class="note__icon"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 4 2.5 20h19L12 4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4M12 17v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><div><div class="note__title">Delete is permanent</div><p>Deleting a user takes two clicks (<span class="ui">Delete</span>, then <span class="ui">Confirm Delete</span>) and cannot be undone. Deactivate instead if they might come back.</p></div></div><h2 id="the-roles-tab">The Roles tab</h2><p>The <strong>Roles</strong> tab lists the five roles with their descriptions. What each role can do is fixed by Elevate, so editing a role’s permissions there does not change anyone’s access yet. Change a person’s access by changing their role.</p><div class="note note--info" role="note"><span class="note__icon"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 11v6M12 7.5v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><div><div class="note__title">Super Admin accounts</div><p>The user form cannot create a Super Admin. Ask the era92 development team if you need one.</p></div></div></div><nav class="pager" aria-label="More guides"><a class="prev" href="../../admin/dashboard/index.html" rel="prev"><small>← Previous</small><span>Your admin dashboard</span></a><a class="next" href="../../admin/registrations/index.html" rel="next"><small>Next →</small><span>Approve enrolments across all hubs</span></a></nav></article><aside class="toc" aria-label="On this page"><div class="toc__title">On this page</div><a href="#find-and-edit-a-user" data-target="find-and-edit-a-user">Find and edit a user</a><a href="#reset-a-password-or-deactivate-an-account" data-target="reset-a-password-or-deactivate-an-account">Reset a password or deactivate an account</a><a href="#the-roles-tab" data-target="the-roles-tab">The Roles tab</a><div class="toc__help"><strong>Need a person?</strong><br>Email <a href="mailto:support@era92elevate.org">support@era92elevate.org</a> or see <a href="../../start/get-help/index.html">all contacts</a>.</div></aside></div></main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>era92 Group · Elevate Help</span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="../../start/get-help/index.html">Contact support</a>
+        <a href="../../start/sign-in/index.html">Sign-in help</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search the guides" hidden>
+    <div class="modal__panel search">
+      <div class="search__field">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Try “attendance”, “pay”, “grade”…" autocomplete="off" aria-label="Search the guides" aria-controls="searchResults" />
+        <button class="search__esc" id="searchClose" type="button">Esc</button>
+      </div>
+      <ul class="search__results" id="searchResults" role="listbox" aria-label="Results"></ul>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">×</button>
+    <figure>
+      <img id="lightboxImg" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script>window.DOCS_BASE = "../../";</script>
+  <script src="../../assets/js/content.js" defer></script>
+  <script src="../../assets/js/render.js" defer></script>
+  <script src="../../assets/js/app.js" defer></script>
+</body>
+</html>

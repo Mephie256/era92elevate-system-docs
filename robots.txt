@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mephie256.github.io/era92elevate-system-docs/sitemap.xml

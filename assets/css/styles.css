@@ -198,6 +198,7 @@ kbd {
 }
 .hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
 .eyebrow {
+  margin: 0;
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 15px; font-weight: 700;
   color: var(--teal-text);
@@ -235,7 +236,7 @@ kbd {
 .burst { position: absolute; left: -64px; bottom: -40px; width: 120px; height: 120px; opacity: .9; pointer-events: none; }
 
 /* Role cards */
-.roles { display: grid; grid-template-columns: 1.35fr 1fr 1fr; gap: 16px; margin-top: 52px; }
+.roles { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 14px; margin-top: 52px; }
 .role-card {
   position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 22px;
   min-height: 190px; padding: 26px 26px 22px; border-radius: var(--radius);
@@ -260,6 +261,9 @@ kbd {
 .role-card--instructor .role-card__blurb { color: var(--text-2); }
 .role-card--hub { background: var(--orange); color: #fff; }
 .role-card--hub .role-card__blurb { color: rgba(255, 255, 255, .9); }
+.role-card--admin { background: #0e3d48; color: #fff; }
+.role-card--admin .role-card__num { color: var(--sky); }
+.role-card--admin .role-card__blurb { color: rgba(255, 255, 255, .8); }
 .avatars { display: flex; }
 .avatars span {
   width: 34px; height: 34px; border-radius: 50%; border: 2px solid #2a2224; margin-left: -9px;
@@ -327,6 +331,7 @@ kbd {
   font-size: 13px; font-weight: 700; color: var(--text-2);
 }
 .role-switch a:hover { text-decoration: none; color: var(--text); background: var(--surface-2); }
+.role-switch a:first-child { grid-column: 1 / -1; }
 .role-switch a[aria-current="true"] { background: var(--ink); color: #fff; }
 :root[data-theme="dark"] .role-switch a[aria-current="true"] { background: var(--orange); }
 .nav-group { margin-bottom: 22px; }
@@ -355,6 +360,7 @@ kbd {
 .role-pill--student { background: var(--orange); }
 .role-pill--instructor { background: var(--teal); }
 .role-pill--hub-manager { background: var(--grad); }
+.role-pill--admin { background: #0e3d48; }
 .article h1 {
   font-family: var(--font-display); font-weight: 600; letter-spacing: -.02em;
   font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.15;
@@ -477,6 +483,7 @@ td:first-child { font-weight: 600; min-width: 150px; }
 .role-hero--instructor { background: linear-gradient(110deg, #00566b 0%, var(--teal) 60%, #49b7d1 100%); }
 .role-hero--hub-manager { background: var(--grad); }
 .role-hero--start { background: var(--ink); }
+.role-hero--admin { background: linear-gradient(110deg, #0e3d48 0%, #00566b 60%, var(--teal) 100%); }
 .role-hero h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.7rem, 3.4vw, 2.4rem); }
 .role-hero p { margin: 10px 0 0; max-width: 520px; color: rgba(255, 255, 255, .85); font-size: 16.5px; }
 .role-hero svg { position: absolute; right: 26px; bottom: 22px; width: 150px; opacity: .45; }
@@ -550,7 +557,6 @@ td:first-child { font-weight: 600; min-width: 150px; }
   .hero { grid-template-columns: 1fr; }
   .hero__visual { max-width: 560px; }
   .roles { grid-template-columns: 1fr 1fr; }
-  .role-card--student { grid-column: span 2; }
   .tasks { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 900px) {

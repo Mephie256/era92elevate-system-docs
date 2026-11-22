@@ -3,8 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Elevate Help</title>
-  <meta name="description" content="Step-by-step guides for students, instructors and hub managers on the era92 Elevate learning portal." />
+  <title>Elevate Help: guides for every role on the era92 Elevate portal</title>
+  <meta name="description" content="Step-by-step help for students, instructors, hub managers and admins on the era92 Elevate learning portal: enrol, pay, learn, mark work, take attendance and manage users." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://mephie256.github.io/era92elevate-system-docs/" />
+  <meta name="theme-color" content="#faf6ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#131418" media="(prefers-color-scheme: dark)" />
+  <meta property="og:site_name" content="Elevate Help" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Elevate Help: guides for every role on the era92 Elevate portal" />
+  <meta property="og:description" content="Step-by-step help for students, instructors, hub managers and admins on the era92 Elevate learning portal: enrol, pay, learn, mark work, take attendance and manage users." />
+  <meta property="og:url" content="https://mephie256.github.io/era92elevate-system-docs/" />
+  <meta property="og:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Elevate Help: guides for every role on the era92 Elevate portal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Elevate Help: guides for every role on the era92 Elevate portal" />
+  <meta name="twitter:description" content="Step-by-step help for students, instructors, hub managers and admins on the era92 Elevate learning portal: enrol, pay, learn, mark work, take attendance and manage users." />
+  <meta name="twitter:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,31 +38,32 @@
       } catch (e) {}
     })();
   </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://mephie256.github.io/era92elevate-system-docs/#website","name":"Elevate Help","url":"https://mephie256.github.io/era92elevate-system-docs/","description":"Step-by-step help for students, instructors, hub managers and admins on the era92 Elevate learning portal: enrol, pay, learn, mark work, take attendance and manage users.","inLanguage":"en","publisher":{"@type":"Organization","name":"era92 Elevate","url":"https://mephie256.github.io/era92elevate-system-docs/","logo":"https://mephie256.github.io/era92elevate-system-docs/favicon.png","email":"support@era92elevate.org","telephone":"+256745887386"}}]}</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="topbar">
     <div class="topbar__inner">
-      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </button>
 
-      <a class="brand" href="#/" aria-label="Elevate Help home">
-        <img class="brand__logo brand__logo--light" src="assets/img/elevate-logo.png" alt="era92 elevate" />
-        <img class="brand__logo brand__logo--dark" src="assets/img/elevate-logo-dark.png" alt="era92 elevate" />
+      <a class="brand" href="index.html" aria-label="Elevate Help home">
+        <img class="brand__logo brand__logo--light" src="assets/img/elevate-logo.png" alt="era92 elevate" width="263" height="72" />
+        <img class="brand__logo brand__logo--dark" src="assets/img/elevate-logo-dark.png" alt="era92 elevate" width="2001" height="553" />
         <span class="brand__tag">Help</span>
       </a>
 
-      <nav class="topnav" id="topnav" aria-label="Roles"></nav>
+      <nav class="topnav" id="topnav" aria-label="Roles"><a href="start/index.html">Start here</a><a href="student/index.html">Student</a><a href="instructor/index.html">Instructor</a><a href="hub-manager/index.html">Hub Manager</a><a href="admin/index.html">Admin</a></nav>
 
       <div class="topbar__actions">
-        <button class="search-trigger" id="searchOpen" aria-label="Search the guides">
+        <button class="search-trigger" id="searchOpen" type="button" aria-label="Search the guides">
           <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <span class="search-trigger__label">Search guides</span>
           <kbd>/</kbd>
         </button>
-        <button class="icon-btn" id="themeBtn" aria-label="Switch light or dark mode">
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode">
           <svg class="i-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           <svg class="i-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
         </button>
@@ -53,40 +72,40 @@
   </header>
 
   <div class="scrim" id="scrim" hidden></div>
-  <main id="main" tabindex="-1"></main>
+  <main id="main" tabindex="-1"><div class="home"><div class="shell"><section class="hero"><div><p class="eyebrow">Elevate Help Centre</p><h1>Learn the platform,<br>one role at a <span class="hl">time.<svg viewBox="0 0 240 22" preserveAspectRatio="none" aria-hidden="true"><path d="M2 14c13 0 13-10 26-10s13 14 26 14 13-14 26-14 13 14 26 14 13-14 26-14 13 14 26 14 13-14 26-14 13 14 26 14 13-10 26-10" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/></svg></span></h1><p class="lead">Step-by-step guides for students, instructors, hub managers and admins, written from how Elevate actually works, with real screens.</p><div class="hero__cta"><a class="btn btn--primary" href="#roles">Find your guide</a><button class="btn btn--ghost" type="button" data-open-search>Search the guides</button></div></div><div class="hero__visual"><div class="hero__photo"><img src="assets/img/auth-hero.png" alt="Students working together on a laptop at an era92 Elevate learning hub" width="696" height="565" fetchpriority="high" /></div><div class="float-chip" aria-hidden="true"><span class="dot"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>You’re checked in!</div></div></section><section class="roles" id="roles" aria-label="Guides by role"><a class="role-card role-card--student" href="student/index.html"><div><div class="role-card__num">14</div><div class="role-card__name">Student guides</div><div class="role-card__blurb">Apply for a course, pay, learn, hand in work and build your portfolio.</div></div><div class="role-card__foot"><span>Open guides</span><span class="role-card__arrow"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a><a class="role-card role-card--instructor" href="instructor/index.html"><div><div class="role-card__num">13</div><div class="role-card__name">Instructor guides</div><div class="role-card__blurb">Build your curriculum, set and mark work, and follow how students are doing.</div></div><div class="role-card__foot"><span>Open guides</span><span class="role-card__arrow"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a><a class="role-card role-card--hub" href="hub-manager/index.html"><div><div class="role-card__num">16</div><div class="role-card__name">Hub Manager guides</div><div class="role-card__blurb">Approve students, plan the week, take attendance and keep your hub on track.</div></div><div class="role-card__foot"><span>Open guides</span><span class="role-card__arrow"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a><a class="role-card role-card--admin" href="admin/index.html"><div><div class="role-card__num">13</div><div class="role-card__name">Admin guides</div><div class="role-card__blurb">Run the platform across every hub: users, hubs, fees, results and reports.</div></div><div class="role-card__foot"><span>Open guides</span><span class="role-card__arrow"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a></section><section class="section"><div class="section__head"><div><h2>Popular tasks</h2><p>The things people look up most.</p></div><a href="start/index.html">Start here <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="tasks"><a class="task" href="student/enrol/index.html"><span class="task__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Z M4 21a2 2 0 0 1 2-2h13" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><span class="task__title">Apply for a course</span><span class="task__meta">Student guide</span></span></a><a class="task" href="student/payments/index.html"><span class="task__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><span class="task__title">Pay your fees with mobile money</span><span class="task__meta">Student guide</span></span></a><a class="task" href="student/attendance/index.html"><span class="task__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><span class="task__title">Check in to class</span><span class="task__meta">Student guide</span></span></a><a class="task" href="instructor/grading/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m5 12 4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Mark submissions</span><span class="task__meta">Instructor guide</span></span></a><a class="task" href="instructor/curriculum/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><span class="task__title">Build modules and lessons</span><span class="task__meta">Instructor guide</span></span></a><a class="task" href="hub-manager/approve/index.html"><span class="task__icon task__icon--ink"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><span class="task__title">Approve enrolment requests</span><span class="task__meta">Hub Manager guide</span></span></a><a class="task" href="hub-manager/attendance/index.html"><span class="task__icon task__icon--ink"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h2v2h-2zM18 18h2v2h-2zM14 18h2" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><span class="task__title">Take attendance with a QR code</span><span class="task__meta">Hub Manager guide</span></span></a><a class="task" href="admin/users/index.html"><span class="task__icon task__icon--ink"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><span class="task__title">Create users and set roles</span><span class="task__meta">Admin guide</span></span></a><a class="task" href="start/forgot-password/index.html"><span class="task__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="8" cy="15" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m11 12 9-9M17 6l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><span class="task__title">Reset a forgotten password</span><span class="task__meta">Everyone guide</span></span></a></div></section><section class="support"><svg class="support__wave" viewBox="0 0 240 22" aria-hidden="true"><path d="M2 14c13 0 13-10 26-10s13 14 26 14 13-14 26-14 13 14 26 14 13-14 26-14 13 14 26 14 13-14 26-14 13 14 26 14 13-10 26-10" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg><div><h2>Still stuck?</h2><p>The era92 Elevate team is happy to help. Email or call us and tell us your role and what you were trying to do.</p></div><div class="contact-list"><a href="mailto:support@era92elevate.org"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2"/></svg>support@era92elevate.org</a><a href="tel:+256745887386"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>+256 745 887 386</a><a href="tel:+256705783917"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>+256 705 783 917</a></div></section></div></div></main>
 
   <footer class="footer">
     <div class="footer__inner">
       <span>era92 Group · Elevate Help</span>
-      <span class="footer__links">
-        <a href="#/start/get-help">Contact support</a>
-        <a href="#/start/sign-in">Sign-in help</a>
-      </span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="start/get-help/index.html">Contact support</a>
+        <a href="start/sign-in/index.html">Sign-in help</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- Search dialog -->
   <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search the guides" hidden>
     <div class="modal__panel search">
       <div class="search__field">
         <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-        <input id="searchInput" type="search" placeholder="Try “attendance”, “pay”, “grade”…" autocomplete="off" aria-controls="searchResults" />
-        <button class="search__esc" id="searchClose">Esc</button>
+        <input id="searchInput" type="search" placeholder="Try “attendance”, “pay”, “grade”…" autocomplete="off" aria-label="Search the guides" aria-controls="searchResults" />
+        <button class="search__esc" id="searchClose" type="button">Esc</button>
       </div>
-      <ul class="search__results" id="searchResults" role="listbox"></ul>
+      <ul class="search__results" id="searchResults" role="listbox" aria-label="Results"></ul>
     </div>
   </div>
 
-  <!-- Screenshot viewer -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
-    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">×</button>
     <figure>
       <img id="lightboxImg" alt="" />
       <figcaption id="lightboxCap"></figcaption>
     </figure>
   </div>
 
-  <script src="assets/js/content.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script>window.DOCS_BASE = "";</script>
+  <script src="assets/js/content.js" defer></script>
+  <script src="assets/js/render.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Take attendance with a QR code (Hub Manager) · Elevate Help</title>
+  <meta name="description" content="Open a session, show the code, close the register. A step-by-step Elevate guide for hub managers, with screenshots." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://mephie256.github.io/era92elevate-system-docs/hub-manager/attendance/" />
+  <meta name="theme-color" content="#faf6ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#131418" media="(prefers-color-scheme: dark)" />
+  <meta property="og:site_name" content="Elevate Help" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Take attendance with a QR code (Hub Manager) · Elevate Help" />
+  <meta property="og:description" content="Open a session, show the code, close the register. A step-by-step Elevate guide for hub managers, with screenshots." />
+  <meta property="og:url" content="https://mephie256.github.io/era92elevate-system-docs/hub-manager/attendance/" />
+  <meta property="og:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Elevate Help: guides for every role on the era92 Elevate portal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Take attendance with a QR code (Hub Manager) · Elevate Help" />
+  <meta name="twitter:description" content="Open a session, show the code, close the register. A step-by-step Elevate guide for hub managers, with screenshots." />
+  <meta name="twitter:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <link rel="icon" type="image/png" href="../../favicon.png" />
+  <link rel="apple-touch-icon" href="../../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <script>
+    // Apply the saved theme before paint so the page never flashes.
+    (function () {
+      try {
+        var t = localStorage.getItem('elevate-docs-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Help","item":"https://mephie256.github.io/era92elevate-system-docs/"},{"@type":"ListItem","position":2,"name":"Hub Manager","item":"https://mephie256.github.io/era92elevate-system-docs/hub-manager/"},{"@type":"ListItem","position":3,"name":"Take attendance with a QR code","item":"https://mephie256.github.io/era92elevate-system-docs/hub-manager/attendance/"}]},{"@type":"TechArticle","headline":"Take attendance with a QR code","description":"Open a session, show the code, close the register. A step-by-step Elevate guide for hub managers, with screenshots.","url":"https://mephie256.github.io/era92elevate-system-docs/hub-manager/attendance/","image":"https://mephie256.github.io/era92elevate-system-docs/assets/screens/hubmanager-attendance.webp","articleSection":"Hub Manager","inLanguage":"en","dateModified":"2026-11-22","author":{"@type":"Organization","name":"era92 Elevate","url":"https://mephie256.github.io/era92elevate-system-docs/","logo":"https://mephie256.github.io/era92elevate-system-docs/favicon.png","email":"support@era92elevate.org","telephone":"+256745887386"},"publisher":{"@type":"Organization","name":"era92 Elevate","url":"https://mephie256.github.io/era92elevate-system-docs/","logo":"https://mephie256.github.io/era92elevate-system-docs/favicon.png","email":"support@era92elevate.org","telephone":"+256745887386"},"isPartOf":{"@id":"https://mephie256.github.io/era92elevate-system-docs/#website"}}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <a class="brand" href="../../index.html" aria-label="Elevate Help home">
+        <img class="brand__logo brand__logo--light" src="../../assets/img/elevate-logo.png" alt="era92 elevate" width="263" height="72" />
+        <img class="brand__logo brand__logo--dark" src="../../assets/img/elevate-logo-dark.png" alt="era92 elevate" width="2001" height="553" />
+        <span class="brand__tag">Help</span>
+      </a>
+
+      <nav class="topnav" id="topnav" aria-label="Roles"><a href="../../start/index.html">Start here</a><a href="../../student/index.html">Student</a><a href="../../instructor/index.html">Instructor</a><a href="../../hub-manager/index.html" aria-current="true">Hub Manager</a><a href="../../admin/index.html">Admin</a></nav>
+
+      <div class="topbar__actions">
+        <button class="search-trigger" id="searchOpen" type="button" aria-label="Search the guides">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="search-trigger__label">Search guides</span>
+          <kbd>/</kbd>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="main" tabindex="-1"><div class="docs"><aside class="sidebar" id="sidebar" aria-label="Hub Manager guides"><nav class="role-switch" aria-label="Choose a role"><a href="../../start/index.html">Start here</a><a href="../../student/index.html">Student</a><a href="../../instructor/index.html">Instructor</a><a href="../../hub-manager/index.html" aria-current="true">Hub Manager</a><a href="../../admin/index.html">Admin</a></nav><nav aria-label="Hub Manager guides"><div class="nav-group"><div class="nav-group__title">Your portal</div><a href="../../hub-manager/overview/index.html">Your hub manager portal</a><a href="../../hub-manager/dashboard/index.html">Your hub dashboard</a></div><div class="nav-group"><div class="nav-group__title">Students</div><a href="../../hub-manager/approve/index.html">Approve enrolment requests</a><a href="../../hub-manager/students/index.html">Manage students</a><a href="../../hub-manager/payments/index.html">Payments and who owes</a><a href="../../hub-manager/blueprints/index.html">Student Blueprints</a></div><div class="nav-group"><div class="nav-group__title">Teaching and classes</div><a href="../../hub-manager/courses/index.html">Courses and curriculum</a><a href="../../hub-manager/timetable/index.html">Plan the timetable</a><a href="../../hub-manager/attendance/index.html" aria-current="page">Take attendance with a QR code</a><a href="../../hub-manager/events/index.html">Event check-ins and community reach</a><a href="../../hub-manager/online-progress/index.html">Online course progress</a><a href="../../hub-manager/announcements/index.html">Announcements and calendar events</a><a href="../../hub-manager/workshops/index.html">Workshops and podcasts</a></div><div class="nav-group"><div class="nav-group__title">Insights</div><a href="../../hub-manager/performance/index.html">Performance and reports</a><a href="../../hub-manager/chats/index.html">Chats</a><a href="../../hub-manager/hub-faq/index.html">Hub manager questions</a></div></nav></aside><article class="content article"><nav class="crumbs" aria-label="Breadcrumb"><a href="../../index.html">Help</a><span aria-hidden="true">/</span><a href="../../hub-manager/index.html">Hub Manager</a><span aria-hidden="true">/</span><span>Teaching and classes</span></nav><span class="role-pill role-pill--hub-manager">Hub Manager</span><h1 style="margin-top:14px">Take attendance with a QR code</h1><p class="summary">Open a session, show the code, close the register.</p><div class="article__body"><figure class="shot"><button class="shot__frame" type="button" data-shot="hubmanager-attendance" data-cap="Attendance and session history." aria-label="Enlarge screenshot: Attendance and session history."><span class="shot__bar" aria-hidden="true"><span class="shot__dots"><i></i><i></i><i></i></span><span class="shot__tab"><img src="../../favicon.png" alt="" width="14" height="14" />Attendance · Elevate</span></span><img src="../../assets/screens/hubmanager-attendance.webp" alt="Attendance and session history." width="1440" height="900" fetchpriority="high" /></button><figcaption>Attendance and session history.</figcaption></figure><ol class="steps"><li>Open <span class="ui">Academics</span> → <span class="ui">Attendance</span> and click <span class="ui">New Session</span>.</li><li>Type a <span class="ui">Session Label</span>, for example “22nd November – Morning class attendance”.</li><li>Choose how long the QR lasts: 5, 10, 15 or 30 minutes, or 1 hour.</li><li>Choose <strong>Course</strong> and pick the course (or <strong>Event</strong> and pick the event). Your hub is already filled in.</li><li>Click <span class="ui">Create &amp; Show QR</span>.</li><li>Put the QR and the 6-character <strong>Session Code</strong> on the screen. Students scan it, or type the code at /attend.</li><li>Watch <strong>Live Check-ins</strong> fill up (it refreshes every 5 seconds).</li><li>Click <span class="ui">Close Session</span> when the register is done.</li></ol><div class="note note--warn" role="note"><span class="note__icon"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 4 2.5 20h19L12 4Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 10v4M12 17v.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span><div><div class="note__title">Closing marks absences</div><p>When you close a session, every student on that course in your hub who did not check in is recorded as <strong>Absent</strong>.</p></div></div><h2 id="look-back">Look back</h2><ul><li><strong>Session History</strong>: every recent session with its code, date, number checked in and status (Active, Expired, Closed). Use the eye icon to see who checked in.</li><li><strong>Attendance History</strong>: search a student to see every session they attended or missed.</li><li><strong>Online Check-ins</strong>: daily check-ins from students studying online.</li></ul></div><nav class="pager" aria-label="More guides"><a class="prev" href="../../hub-manager/timetable/index.html" rel="prev"><small>← Previous</small><span>Plan the timetable</span></a><a class="next" href="../../hub-manager/events/index.html" rel="next"><small>Next →</small><span>Event check-ins and community reach</span></a></nav></article><aside class="toc" aria-label="On this page"><div class="toc__title">On this page</div><a href="#look-back" data-target="look-back">Look back</a><div class="toc__help"><strong>Need a person?</strong><br>Email <a href="mailto:support@era92elevate.org">support@era92elevate.org</a> or see <a href="../../start/get-help/index.html">all contacts</a>.</div></aside></div></main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>era92 Group · Elevate Help</span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="../../start/get-help/index.html">Contact support</a>
+        <a href="../../start/sign-in/index.html">Sign-in help</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search the guides" hidden>
+    <div class="modal__panel search">
+      <div class="search__field">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Try “attendance”, “pay”, “grade”…" autocomplete="off" aria-label="Search the guides" aria-controls="searchResults" />
+        <button class="search__esc" id="searchClose" type="button">Esc</button>
+      </div>
+      <ul class="search__results" id="searchResults" role="listbox" aria-label="Results"></ul>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">×</button>
+    <figure>
+      <img id="lightboxImg" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script>window.DOCS_BASE = "../../";</script>
+  <script src="../../assets/js/content.js" defer></script>
+  <script src="../../assets/js/render.js" defer></script>
+  <script src="../../assets/js/app.js" defer></script>
+</body>
+</html>

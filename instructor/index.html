@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Instructor guides for Elevate · Elevate Help</title>
+  <meta name="description" content="Build your curriculum, set and mark work, and follow how students are doing. 13 step-by-step guides with screenshots." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://mephie256.github.io/era92elevate-system-docs/instructor/" />
+  <meta name="theme-color" content="#faf6ed" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#131418" media="(prefers-color-scheme: dark)" />
+  <meta property="og:site_name" content="Elevate Help" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Instructor guides for Elevate · Elevate Help" />
+  <meta property="og:description" content="Build your curriculum, set and mark work, and follow how students are doing. 13 step-by-step guides with screenshots." />
+  <meta property="og:url" content="https://mephie256.github.io/era92elevate-system-docs/instructor/" />
+  <meta property="og:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Elevate Help: guides for every role on the era92 Elevate portal" />
+  <meta property="og:locale" content="en_GB" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Instructor guides for Elevate · Elevate Help" />
+  <meta name="twitter:description" content="Build your curriculum, set and mark work, and follow how students are doing. 13 step-by-step guides with screenshots." />
+  <meta name="twitter:image" content="https://mephie256.github.io/era92elevate-system-docs/assets/img/og-image.png" />
+  <link rel="icon" type="image/png" href="../favicon.png" />
+  <link rel="apple-touch-icon" href="../favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <script>
+    // Apply the saved theme before paint so the page never flashes.
+    (function () {
+      try {
+        var t = localStorage.getItem('elevate-docs-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Help","item":"https://mephie256.github.io/era92elevate-system-docs/"},{"@type":"ListItem","position":2,"name":"Instructor","item":"https://mephie256.github.io/era92elevate-system-docs/instructor/"}]}]}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <a class="brand" href="../index.html" aria-label="Elevate Help home">
+        <img class="brand__logo brand__logo--light" src="../assets/img/elevate-logo.png" alt="era92 elevate" width="263" height="72" />
+        <img class="brand__logo brand__logo--dark" src="../assets/img/elevate-logo-dark.png" alt="era92 elevate" width="2001" height="553" />
+        <span class="brand__tag">Help</span>
+      </a>
+
+      <nav class="topnav" id="topnav" aria-label="Roles"><a href="../start/index.html">Start here</a><a href="../student/index.html">Student</a><a href="../instructor/index.html" aria-current="true">Instructor</a><a href="../hub-manager/index.html">Hub Manager</a><a href="../admin/index.html">Admin</a></nav>
+
+      <div class="topbar__actions">
+        <button class="search-trigger" id="searchOpen" type="button" aria-label="Search the guides">
+          <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span class="search-trigger__label">Search guides</span>
+          <kbd>/</kbd>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <main id="main" tabindex="-1"><div class="docs"><aside class="sidebar" id="sidebar" aria-label="Instructor guides"><nav class="role-switch" aria-label="Choose a role"><a href="../start/index.html">Start here</a><a href="../student/index.html">Student</a><a href="../instructor/index.html" aria-current="true">Instructor</a><a href="../hub-manager/index.html">Hub Manager</a><a href="../admin/index.html">Admin</a></nav><nav aria-label="Instructor guides"><div class="nav-group"><div class="nav-group__title">Your portal</div><a href="../instructor/overview/index.html">Your instructor portal</a><a href="../instructor/dashboard/index.html">Your dashboard</a></div><div class="nav-group"><div class="nav-group__title">Teaching</div><a href="../instructor/curriculum/index.html">Build your course curriculum</a><a href="../instructor/create-assessment/index.html">Create an assessment</a><a href="../instructor/grading/index.html">Mark submissions</a><a href="../instructor/online-progress/index.html">Online course progress and points</a><a href="../instructor/resources/index.html">Share resources</a></div><div class="nav-group"><div class="nav-group__title">Students and classes</div><a href="../instructor/students/index.html">Students and performance</a><a href="../instructor/timetable/index.html">Timetable and live classes</a><a href="../instructor/chats/index.html">Chat with students</a><a href="../instructor/reports/index.html">Reports and analytics</a><a href="../instructor/announcements/index.html">Announcements and workshops</a><a href="../instructor/instructor-faq/index.html">Instructor questions</a></div></nav></aside><div class="content"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Help</a><span aria-hidden="true">/</span><span>Instructor</span></nav><div class="role-hero role-hero--instructor"><h1>Instructor guides</h1><p>Build your curriculum, set and mark work, and follow how students are doing.</p><svg viewBox="0 0 240 22" aria-hidden="true"><path d="M2 14c13 0 13-10 26-10s13 14 26 14 13-14 26-14 13 14 26 14 13-14 26-14 13 14 26 14 13-14 26-14 13 14 26 14 13-10 26-10" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round"/></svg></div><section class="guide-group"><h2>Your portal</h2><div class="guide-grid"><a class="task" href="../instructor/overview/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Your instructor portal</span><span class="task__meta">What is in the menu and what you can see.</span></span></a><a class="task" href="../instructor/dashboard/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Your dashboard</span><span class="task__meta">Attendance, top performers and work to mark.</span></span></a></div></section><section class="guide-group"><h2>Teaching</h2><div class="guide-grid"><a class="task" href="../instructor/curriculum/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Build your course curriculum</span><span class="task__meta">Add modules, lessons, videos and quizzes.</span></span></a><a class="task" href="../instructor/create-assessment/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Create an assessment</span><span class="task__meta">Set work with a due date and a max score.</span></span></a><a class="task" href="../instructor/grading/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Mark submissions</span><span class="task__meta">Score, give feedback, and the 24-hour edit window.</span></span></a><a class="task" href="../instructor/online-progress/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Online course progress and points</span><span class="task__meta">Follow online learners and approve their projects.</span></span></a><a class="task" href="../instructor/resources/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Share resources</span><span class="task__meta">Add links to documents, videos and tools.</span></span></a></div></section><section class="guide-group"><h2>Students and classes</h2><div class="guide-grid"><a class="task" href="../instructor/students/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Students and performance</span><span class="task__meta">Who is on your courses and how they rank.</span></span></a><a class="task" href="../instructor/timetable/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Timetable and live classes</span><span class="task__meta">Your teaching week and meeting links.</span></span></a><a class="task" href="../instructor/chats/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Chat with students</span><span class="task__meta">Direct messages and course chats.</span></span></a><a class="task" href="../instructor/reports/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Reports and analytics</span><span class="task__meta">Grades and submission rates by class.</span></span></a><a class="task" href="../instructor/announcements/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Announcements and workshops</span><span class="task__meta">What you can see and who posts.</span></span></a><a class="task" href="../instructor/instructor-faq/index.html"><span class="task__icon task__icon--teal"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><span class="task__title">Instructor questions</span><span class="task__meta">Quick answers.</span></span></a></div></section></div></div></main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>era92 Group · Elevate Help</span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="../start/get-help/index.html">Contact support</a>
+        <a href="../start/sign-in/index.html">Sign-in help</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="modal" id="searchModal" role="dialog" aria-modal="true" aria-label="Search the guides" hidden>
+    <div class="modal__panel search">
+      <div class="search__field">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="searchInput" type="search" placeholder="Try “attendance”, “pay”, “grade”…" autocomplete="off" aria-label="Search the guides" aria-controls="searchResults" />
+        <button class="search__esc" id="searchClose" type="button">Esc</button>
+      </div>
+      <ul class="search__results" id="searchResults" role="listbox" aria-label="Results"></ul>
+    </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot" hidden>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close">×</button>
+    <figure>
+      <img id="lightboxImg" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+  </div>
+
+  <script>window.DOCS_BASE = "../";</script>
+  <script src="../assets/js/content.js" defer></script>
+  <script src="../assets/js/render.js" defer></script>
+  <script src="../assets/js/app.js" defer></script>
+</body>
+</html>
